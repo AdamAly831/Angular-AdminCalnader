@@ -1,0 +1,29 @@
+<div ng-controller="CalandarController">
+   <fieldset><legend>Calandar</legend>
+      <table>
+          <table>
+         <thead>
+            <tr>
+                <th>Date</th>
+               <th>Class</th>
+               <th>catigory</th>
+               <th>Location</th>
+               <th>slots</th>
+            </tr>
+         </thead>
+         <br>
+         <tbody ng-repeat="course in courses">
+            <tr>
+               <td ng-bind="course.date"></td>
+               <td ng-bind="course.class"></td>
+               <td ng-bind="course.cat"></td>
+               <td ng-bind="course.loc"></td>
+               <td ng-bind="course.slots"></td>
+                <td> <button ng-click=" ">Sign Up</button> </td>
+            </tr>
+           
+         </tbody>
+      </table>
+   </fieldset>
+</div>
+

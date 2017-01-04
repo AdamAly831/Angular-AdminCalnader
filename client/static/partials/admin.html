@@ -1,0 +1,40 @@
+<div ng-controller="AdminController">
+   <fieldset><legend>Customize Users Controller</legend>
+      <form>
+         <label for="date">Date</label>
+         <input id="date" type="text" ng-model="newCourse.date"/><br>
+         <label for="class">Class</label>
+         <input id="class" type="text" ng-model="newCourse.class"/><br>
+         <label for="cat">Catigory</label>
+         <input id="cat" type="text" ng-model="newCourse.cat"/><br>
+         <label for="loc">Location</label>
+         <input id="loc" type="text" ng-model="newCourse.loc"/><br>
+         <label for="slots">Slots</label>
+         <input id="slots" type="text" ng-model="newCourse.slots"/><br>
+         <button type="submit" ng-click="create()">Create course</button>
+      </form>
+      <table>
+         <thead>
+            <tr>
+                <th>Date</th>
+               <th>Class</th>
+               <th>catigory</th>
+               <th>Location</th>
+               <th>slots</th>
+            </tr>
+         </thead>
+         <br>
+         <tbody ng-repeat="course in courses">
+            <tr>
+               <td ng-bind="course.date"></td>
+               <td ng-bind="course.class"></td>
+               <td ng-bind="course.cat"></td>
+               <td ng-bind="course.loc"></td>
+               <td ng-bind="course.slots"></td>
+               <td> <button ng-click="delete($index)">Delete course</button> </td>
+            </tr>
+           
+         </tbody>
+      </table>
+   </fieldset>
+</div>
